@@ -45,6 +45,11 @@ public class Player : MonoBehaviour
             rb.AddForce(new Vector2(0,forcaDoPulo), ForceMode2D.Impulse);
         }
 
+        if (Input.GetKey(KeyCode.F))
+        {
+            animator.SetTrigger("Ataque");
+        }
+
         animator.SetBool("Andando",andando);
         animator.SetBool("Pulo",!noChao);
         
